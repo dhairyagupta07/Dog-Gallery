@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dog Gallery</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .gallery-container {
+            display: grid;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 15px;
+            grid-template-columns: 1fr;
+        }
+        @media (min-width: 640px) {
+            .gallery-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (min-width: 1024px) {
+            .gallery-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border: 2px solid black; 
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            display: block; 
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Awesome Dog Gallery</h1>
+
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=800" alt="A happy brown dog with a red collar">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=800" alt="A small dog wearing sunglasses and a jean jacket">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=800" alt="A golden retriever puppy sitting on the grass">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1598133894008-61f7fdb8cc3a?q=80&w=800" alt="A Corgi smiling at the camera">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=800" alt="A close-up of a husky with blue eyes">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?q=80&w=800" alt="A pug with a tilted head looking curious">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=800" alt="Two small dogs playing together in a park">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?q=80&w=800" alt="A small dog wearing a knitted hat">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=800" alt="A black dog looking upwards with a blurred background">
+        </div>
+    </div>
+
+</body>
+</html>
